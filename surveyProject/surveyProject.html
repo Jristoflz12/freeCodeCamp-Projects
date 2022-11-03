@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<!--Survey about an English as a Foreign Language class. 
+    This will ask students for key info in order to group them according to their needs.-->
+  <head>
+    <meta charset= "utf-8">
+    <meta name = "viewport" content= "width=device-width, initial-scale=1.0">
+    <title>EFL Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">EFL Survey Form </h1>
+    <p id="description">Tell us abourt yourself to place you accordingly</p>
+    <form id="survey-form">
+
+      <!-- First set asks for personal info -->
+      <fieldset>
+        <label id="name-label" for="name">Name: 
+          <input id="name" name="name" type="text" required placeholder="Enter your full name"/>
+        </label>
+        <label id="email-label" for="email">Email: 
+          <input id="email" name="email" type="email" required placeholder="Enter your email address" /></label>
+        <label id="number-label" for="number">Age: 
+          <input id="number" name="age" type="number" min=10 max=100
+          placeholder="Enter your age (number)" required />
+        </label>
+      </fieldset>
+      <!--Second set asks for level of proficiency in the language-->
+      <fieldset>
+        <label for="level">What is your level of English?
+        </label>
+        <select id="dropdown" name="level" placeholder= "Select level of English"required>
+          <option value="">Select your level of English</option>
+          <option value="True beginner">True beginner </>
+          <option value="Basic">Basic </>
+          <option value="Intermediate">Intermediate </>
+          <option value="Advanced">Advanced </>
+        </select>
+        <p id="skills_desc">
+          Select the skills that you consider your strengths in the language:</p>
+          <label for="skills-reading"><input id="skills-reading" name="skills" type="checkbox" value="reading" class="input-checkbox"> Reading</label>
+         <label for="skills-writing"> <input id="skills-writing" name="skills" type="checkbox" class="input-checkbox" value="writing"> Writing</label>
+         <label for="skills-listening"> <input id="skills-listening" name="skills" type="checkbox" class="input-checkbox" value="listening"> Listening</label>
+         <label for="skills-speaking"> <input id="skills-speaking" name="skills" type="checkbox" class="input-checkbox" value="speaking"> Speaking</label><br>
+        <p>Which one do you prefer?</p>
+        <label for="onsite"><input name="classes" class="input-radio" type="radio" value="onsite" required>On-site classes</label>
+        <label for="virtual"><input name="classes" class="input-radio" type="radio" value="virtual"> Virtual classes</label>
+      </fieldset>
+      <fieldset>
+        <label for="comments">Insert here any comments or suggestions:</label>
+        <textarea class="input-textarea", id="comments" name="comments" placeholder="Enter your comment here..."></textarea>
+      </fieldset>
+      <fieldset>
+        <button type="submit" id="submit" class="submit-button">Submit</button><br>
+      </fieldset>
+    </form>
+  </body>
+</html>
